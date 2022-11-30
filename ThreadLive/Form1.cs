@@ -67,6 +67,12 @@ namespace ThreadLive
             Console.WriteLine("Button 2 pressed");
              //newThread.Suspend(); //this is depricated and should not be used as it could kill a thread halfway through an important task.
             endThread = true;       //should signal to it instead
+            timer1.Enabled = true;  //Enabled timer
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("Tick ");
         }
     }
 }
